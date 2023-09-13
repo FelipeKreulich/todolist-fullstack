@@ -10,8 +10,7 @@ router.get('/tasks',
 router.post('/tasks', 
     tasksMiddleware.validateFieldTitle, 
     tasksController.createTask);
-router.delete('/tasks/:id', 
-    tasksMiddleware.validateIdDelete, 
+router.delete('/tasks/:id',
     tasksController.deleteTask);
 router.put('/tasks/:id', 
     tasksMiddleware.validateFieldStatus, 

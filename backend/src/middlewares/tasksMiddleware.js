@@ -26,18 +26,7 @@ const validateFieldStatus = (request, response, next) => {
     next();
 };
 
-const validateIdDelete = (request, response, next) => {
-    const { id } = request.params;
-
-    if (id !== Number) {
-        return response.status(400).json({message: 'You need a valid "ID".'  });
-    }
-
-    next();
-};
-
 module.exports = {
     validateFieldTitle,
     validateFieldStatus,
-    validateIdDelete,
 };
