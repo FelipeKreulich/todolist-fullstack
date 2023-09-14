@@ -20,6 +20,7 @@ Um App de To-Do-List (Lista de Tarefas) utilizando API e Banco de Dados próprio
 - [x] Ver todas as tarefas criadas no Banco de Dados
 - [x] Editar as tarefas já existentes no Banco de Dados
 - [x] Deletar tarefas já existentes no Banco de Dados
+- [x] Aplição Desktop com Electron
 
 ## Layout - 🎨 <div id="#layout"></div>
 <img src="./assets/imageproject1.jpg"/>
@@ -46,21 +47,46 @@ $ cd backend
 # Instale as dependências do Back-End
 $ npm install
 
-# Execute a aplicação
-$ npm run dev
+# Criando e subindo o container Docker
+$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3006 -d mysql
 
-# A aplicação será inciada na porta
+# Configure a sua extensão DataBase Client (host: localhost, port: 3306, username: root password: root) !Atenção: Seu Username e Password devem ser iguais aos passados pelo arquivo .env
+
+# Após configurar, crie seu banco de dados com o `name` sendo igual ao passado pelo arquivo .env
+
+# Crie dentro da extensão uma tabela seguindo o modelo do arquivo `model_mysql.md` e retorne aqui novamente
+
+# Execute a aplicação
+$ npm start
+
+# A API será inciada na porta
 3333, acesse pelo navegador:
 http://localhost:3333/tasks
 ```
 ### Front End
 - É necessário ter a extensão `Live Server` em seu VSCode
 ```bash
-# Clique com Botão direito no arquivo index.html
+# Caso queira roda a aplicação com electron siga as etapas abaixo
 
-# Abra o arquivo com a extensão do `Live Server`
+# Se estiver na pasta do backend, retorne a pasta raiz para acessar o frontend
+$ cd ..
 
-# A aplicação será aberta no seu navegador
+# Abra um novo terminal e entre na pasta frontend
+$ cd frontend
+
+# Instale as dependências do Front-End
+$ npm install
+
+# Execute a aplicação
+$ npm start
+
+-----------------------------------------------------------------------------
+
+# Caso queira usar o app web, instale a extensão live server no vscode
+
+# Clique com o botão direito sobre o arquivo `index.html`
+
+# Execute a aplicação com o Live Server
 ```
 ## Tecnologias Utilizadas - 🔨 <div id="#tecnologias"></div>
 ### Backend
@@ -83,7 +109,6 @@ Felipe Kreulich
 [Portfolio](https://portfolio-felipe.vercel.app)
 
 ## Próximos Passos - 🚶🏻 <div id="#passos"></div>
-- [ ] Adicionar Electron 
 - [ ] Criar Novo Layout
 - [ ] Adicionar Toast's
 - [ ] Agendar Lembretes
