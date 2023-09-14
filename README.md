@@ -83,6 +83,7 @@ Felipe Kreulich
 [Portfolio](https://portfolio-felipe.vercel.app)
 
 ## Próximos Passos - 🚶🏻 <div id="#passos"></div>
+- [ ] Adicionar Electron 
 - [ ] Criar Novo Layout
 - [ ] Adicionar Toast's
 - [ ] Agendar Lembretes
